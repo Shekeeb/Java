@@ -1,0 +1,17 @@
+import java.util.*;
+public class prgm15
+{
+public static void main(String[] args)
+{
+Queue<String> pq= new PriorityQueue<>();
+pq.add("give");
+pq.add("up");
+pq.add("three");
+System.out.println("Orginal queue is: "+pq);
+pq.remove("up");
+System.out.println("\nAfter removal: "+pq);
+System.out.println("\nPoll method: "+pq.poll());
+System.out.println("\nFinal Queue: "+pq);
+System.out.println("\nPeek function: "+pq.peek());
+}
+}
