@@ -1,0 +1,23 @@
+import java.util.*;
+public class prgm14
+{
+public static void main(String[] args)
+{
+ArrayList<String>list=new ArrayList<String>();
+list.add("Khaleel");
+list.add("Subhan");
+list.add("Shekeeb");
+list.add("Farseen");
+list.add("Ikka");
+System.out.println(list);
+System.out.println("\nReturning element: "+list.get(1));
+list.set(1,"Melvin");
+System.out.println("List after insertion of - Melvin");
+for(String word:list)
+System.out.println(word);
+Collections.sort(list);
+System.out.println("\nNewly Sorted list: ");
+for(String word:list)
+System.out.println(word);
+}
+}
