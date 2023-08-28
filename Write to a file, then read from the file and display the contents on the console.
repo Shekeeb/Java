@@ -1,0 +1,35 @@
+import java.io.*;
+public class CopyFile
+{
+public static void main(String args[]) throws IOException
+{
+FileReader in=null;
+FileWriter out=null;
+try
+{
+out=new FileWriter("output.txt");
+out.write("Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.");
+out.close();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+System.out.println("Success...");
+try
+{
+in=new FileReader("output.txt");
+int c;
+while((c=in.read())!=-1)
+{
+System.out.print((char)c);
+}
+System.out.println();
+in.close();
+}
+catch(IOException ex)
+{
+System.out.println(ex);
+}
+}
+}
