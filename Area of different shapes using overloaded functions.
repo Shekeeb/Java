@@ -1,0 +1,33 @@
+import java.util.*;
+class overload
+{
+void area(float x)
+{
+System.out.println("Area of square is:"+x*x+"sq units");
+}
+void area(float x,float y)
+{
+System.out.println("Area of rectangle is:"+x*y+"sq units");
+}
+void area(double r)
+{
+double area=3.14*r*r;
+System.out.println("Area of the circle is:"+area+"sq units");
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the side of square:");
+float a=sc.nextFloat();
+System.out.println("Enter the length of rectangle:");
+float l=sc.nextFloat();
+System.out.println("Enter the breadth of rectangle:");
+float b=sc.nextFloat();
+System.out.println("Enter the radius of circle:");
+double r=sc.nextDouble();
+overload obj=new overload();
+obj.area(a);
+obj.area(l,b);
+obj.area(r);
+}
+}
