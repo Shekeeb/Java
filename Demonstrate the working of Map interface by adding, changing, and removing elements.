@@ -1,0 +1,27 @@
+import java.awt.*;
+import java.util.*;
+public class prgm16
+{
+public static void main(String[] args)
+{
+Map<String,Integer> map = new HashMap<>();
+map.put("Apples", 10);
+map.put("Pineapples", 50);
+map.put("Orange", 30);
+map.put("Kiwi", 100);
+System.out.println("Original Map: ");
+for(Map.Entry<String,Integer> e : map.entrySet()) {
+System.out.println(e.getKey()+" "+e.getValue());
+}
+map.remove("Orange");
+System.out.println("\nMap after removing Orange : ");
+for(Map.Entry<String,Integer> e : map.entrySet()) {
+System.out.println(e.getKey()+" "+e.getValue());
+}
+map.replace("Apples", 150);
+System.out.println("\nMap after changing value of Apples : ");
+for(Map.Entry<String,Integer> e : map.entrySet()) {
+System.out.println(e.getKey()+" "+e.getValue());
+}
+}
+}
