@@ -1,0 +1,50 @@
+import java.util.*;
+class complex
+{
+int real,imaginary;
+complex()
+{
+real=0;
+imaginary=0;
+}
+void input()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the real part of the complex number:");
+real=sc.nextInt();
+System.out.println("Enter the imaginary part of the complex number:");
+imaginary=sc.nextInt();
+}
+void display()
+{
+System.out.println(real+"+"+imaginary+"i");
+}
+complex sum(complex c2)
+{
+complex temp=new complex();
+temp.real=this.real+c2.real;
+temp.imaginary=this.imaginary+c2.imaginary;
+return temp;
+}
+}
+public class prgm3
+{
+public static void main(String args[])
+{
+complex c1=new complex();
+complex c2=new complex();
+complex c3=new complex();
+System.out.println("First complex number");
+c1.input();
+System.out.println("Second complex number");
+c2.input();
+c3=c1.sum(c2);
+System.out.println();
+System.out.println("First complex number is:");
+c1.display();
+System.out.println("Second complex number is:");
+c2.display();
+System.out.println("The sum is:");
+c3.display();
+}
+}
