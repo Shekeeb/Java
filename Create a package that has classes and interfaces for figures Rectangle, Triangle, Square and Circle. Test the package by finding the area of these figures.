@@ -1,0 +1,109 @@
+MainProgram.java:-
+import java.util.*;
+import org.Shapes.*;
+class MainProgram
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the length of rectangle:");
+int a=sc.nextInt();
+System.out.println("Enter the breadth of rectangle:");
+int b=sc.nextInt();
+Rectangle rec=new Rectangle(a,b);
+double ar=rec.area();
+System.out.println("Area of rectangle is : "+ar+"\n");
+System.out.println("Enter the height of triangle:");
+int c=sc.nextInt();
+System.out.println("Enter the base of triangle:");
+int d=sc.nextInt();
+Triangle tri=new Triangle(c,d);
+double at=tri.area();
+System.out.println("Area of triangle is : "+at+"\n");
+System.out.println("Enter the side of square:");
+int e=sc.nextInt();
+Square squ=new Square(e);
+double as=squ.area();
+System.out.println("Area of square is : "+as+"\n");
+System.out.println("Enter the radius of circle:");
+int f=sc.nextInt();
+Circle cir=new Circle(f);
+double ac=cir.area();
+System.out.println("Area of circle is : "+ac);
+}
+}
+
+
+Shapes.java:-
+package org.Shapes;
+interface Shapes
+{
+double area();
+}
+
+
+
+Rectangle.java:-
+package org.Shapes;
+public class Rectangle implements Shapes
+{
+int length,breadth;
+public Rectangle(int l,int b)
+{
+length=l;
+breadth=b;
+}
+public double area()
+{
+return length*breadth;
+}
+}
+
+
+Triangle.java:-
+package org.Shapes;
+public class Triangle implements Shapes
+{
+int base,height;
+public Triangle(int b,int h)
+{
+height=h;
+base=b;
+}
+public double area()
+{
+return (0.5*base*height);
+}
+}
+
+
+Square.java:-
+package org.Shapes;
+public class Square implements Shapes
+{
+int side;
+public Square(int s)
+{
+side=s;
+}
+public double area()
+{
+return (side*side);
+}
+}
+
+
+Circle.java:-
+package org.Shapes;
+public class Circle implements Shapes
+{
+int radius;
+public Circle(int r)
+{
+radius=r;
+}
+public double area()
+{
+return (3.14*radius*radius);
+}
+}
