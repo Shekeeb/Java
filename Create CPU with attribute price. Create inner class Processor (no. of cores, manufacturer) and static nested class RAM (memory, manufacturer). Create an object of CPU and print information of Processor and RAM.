@@ -1,0 +1,34 @@
+import java.io.*;
+class CPU
+{
+double price;
+class processor
+{
+double cores;
+String manufacturer;
+double getCache()
+{
+return 4.3;
+}
+}
+protected class RAM
+{
+double memory;
+String manufacturer;
+double getClockspeed()
+{
+return 5.5;
+}
+}
+}
+public class prgm4
+{
+public static void main(String[]args)
+{
+CPU cpu=new CPU();
+CPU.processor processor=cpu.new processor();
+CPU.RAM ram=cpu.new RAM();
+System.out.println("processor Cache="+processor.getCache());
+System.out.println("Ram clock speed="+ram.getClockspeed());
+}
+}
