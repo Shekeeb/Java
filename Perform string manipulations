@@ -1,0 +1,58 @@
+import java.util.*;
+class prgm6
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a string: ");
+String str1=sc.nextLine();
+int l=str1.length();
+System.out.println("String length = "+l);
+System.out.println("Enter another string: ");
+String str2=sc.nextLine();
+String con=str1.concat(str2);
+System.out.println("Concatenated string = "+con);
+System.out.println("Enter string position to extract character:");
+int pos=sc.nextInt();
+System.out.println(str1.charAt(pos-1));
+if(str1.compareTo(str2)>0)
+{
+System.out.print("First is greater");
+}
+else if(str1.compareTo(str2)==0)
+{
+System.out.print("Equal");
+}
+else if(str1.compareTo(str2)<0)
+{
+System.out.print("Second is greater");
+}
+System.out.print("\nSubstring start position: ");
+int ps=sc.nextInt();
+System.out.print("Substring end position: ");
+int pe=sc.nextInt();
+System.out.println(str1.substring(ps-1,pe));
+sc.nextLine();
+System.out.print("Enter the substring to modify first: ");
+String str3=sc.nextLine();
+System.out.print("Enter the substring to replace from second: ");
+String str4=sc.nextLine();
+if(str1.indexOf(str3)==-1)
+{
+System.out.print("The substring "+str1+" not in first: ");
+}
+else
+{
+str4=str1.replace(str3,str4);
+System.out.print("The modified string: " +str4 );
+}
+System.out.print("\nEnter the first number: ");
+String str5=sc.nextLine();
+System.out.print("Enter the second number: ");
+String str6=sc.nextLine();
+int val1=Integer.valueOf(str5);
+int val2=Integer.valueOf(str6);
+System.out.print("Converted first integer:"+val1);
+System.out.print("\nConverted second integer:"+val2);
+}
+}
