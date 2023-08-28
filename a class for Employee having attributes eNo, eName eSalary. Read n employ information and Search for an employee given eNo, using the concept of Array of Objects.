@@ -1,0 +1,60 @@
+import java.util.*;
+class employee
+{
+int e_no;
+String e_name;
+float e_salary;
+employee(int no,String n,float s)
+{
+this.e_no=no;
+this.e_name=n;
+this.e_salary=s;
+}
+void display()
+{
+System.out.println("Employee details:");
+System.out.println("Employee no:"+this.e_no);
+System.out.println("Employee name:"+this.e_name");
+System.out.println("Employee salary:"+this.e_salary");
+}
+}
+public class prgm7
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the no.of employees:");
+int num=sc.nextInt();
+employee emp[]=new employee[num];
+int i;
+for(i=0;i<num;i++)
+{
+System.out.println("Enter employee no:");
+int no=sc.nextInt();
+sc.nextLine();
+System.out.println("Enter employee name:");
+String n=sc.nextLine();
+System.out.println("Enter the employee salary:");
+float s=sc.nextInt();
+emp[i]=new employee(no,n,s);
+}
+System.out.println("Enter employee number to search:");
+int sea=sc.nextInt();
+int f=0;
+for(i=0;i<num;i++)
+{
+if(emp[i].e_no==sea)
+{
+emp[i].display();
+}
+else
+{
+f++;
+}
+}
+if(f==num)
+{
+System.out.println("Employee not found");
+}
+}
+}
