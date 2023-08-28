@@ -1,0 +1,68 @@
+import java.awt.*;
+import java.net.*;
+import java.awt.event.*;
+public class prgm20 extends Frame
+{
+TextField tf1;
+TextField tf2;
+TextField tf3;
+Label l,l1;
+Button b,b1;
+prgm20()
+{
+setTitle("Largest");
+tf1 = new TextField();
+tf1.setBounds(100, 50, 85, 20);
+add(tf1);
+tf2 = new TextField();
+tf2.setBounds(100, 100, 85, 20);
+add(tf2);
+tf3 = new TextField();
+tf3.setBounds(100, 150, 85, 20);
+add(tf3);
+b = new Button("Largest");
+b.setBounds(110,220,60,40);
+add(b);
+b1 = new Button("Exit");
+b1.setBounds(200,220,60,40);
+add(b1);
+l1 = new Label("");
+l1.setBounds(100, 120, 85, 20);
+add(l1);
+setSize(300,300);
+setVisible(true);
+b.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e)
+{
+int a = Integer.parseInt(tf1.getText());
+int b = Integer.parseInt(tf2.getText());
+int c = Integer.parseInt(tf3.getText());
+int large;
+if (a>b && a>c)
+{
+large=a;
+}
+else if(b>a && b>c)
+{
+large=b;
+}
+else
+{
+large=c;
+}
+l1.setText("Largest is = " + String.valueOf(large));
+}
+});
+b1.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e)
+{
+System.exit(0);
+}});
+}
+public static void main(String []args)
+{
+new LearnAWT();
+}
+}
